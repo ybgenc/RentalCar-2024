@@ -130,6 +130,7 @@
             this.DGVemployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVemployee.Location = new System.Drawing.Point(12, 308);
             this.DGVemployee.Name = "DGVemployee";
+            this.DGVemployee.ReadOnly = true;
             this.DGVemployee.RowHeadersWidth = 51;
             this.DGVemployee.RowTemplate.Height = 24;
             this.DGVemployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -314,6 +315,7 @@
             this.Controls.Add(this.TBname);
             this.Controls.Add(this.label1);
             this.Name = "Employee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee";
             this.Load += new System.EventHandler(this.Employee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVemployee)).EndInit();

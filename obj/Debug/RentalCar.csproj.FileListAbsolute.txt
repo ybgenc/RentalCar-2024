@@ -34,3 +34,4 @@ C:\Users\yusuf\source\repos\RentalCar\obj\Debug\RentalCar.Cars.resources
 C:\Users\yusuf\source\repos\RentalCar\obj\Debug\RentalCar.Login.resources
 C:\Users\yusuf\source\repos\RentalCar\obj\Debug\RentalCar.Contract.resources
 C:\Users\yusuf\source\repos\RentalCar\obj\Debug\RentalCar.Employee.resources
+C:\Users\yusuf\source\repos\RentalCar\obj\Debug\RentalCar.exe.licenses

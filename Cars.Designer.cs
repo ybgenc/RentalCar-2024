@@ -259,6 +259,7 @@
             this.DGVcars.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVcars.Location = new System.Drawing.Point(16, 312);
             this.DGVcars.Name = "DGVcars";
+            this.DGVcars.ReadOnly = true;
             this.DGVcars.RowHeadersWidth = 51;
             this.DGVcars.RowTemplate.Height = 24;
             this.DGVcars.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -396,6 +397,7 @@
             this.Controls.Add(this.TBplate);
             this.Controls.Add(this.label1);
             this.Name = "Cars";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cars";
             this.Load += new System.EventHandler(this.Cars_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PBcarPicture)).EndInit();

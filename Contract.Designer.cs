@@ -58,12 +58,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.GBcontract = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.CBdiscount = new System.Windows.Forms.ComboBox();
+            this.DTP = new System.Windows.Forms.DateTimePicker();
             this.DTPrentDate = new System.Windows.Forms.DateTimePicker();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.CBperiod = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
             this.DTPdeliveryDate = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -71,14 +71,16 @@
             this.BTNcalculate = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.BTNrent = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DGVcontract = new System.Windows.Forms.DataGridView();
             this.carsTableAdapter = new RentalCar.RentalCarDataSet1TableAdapters.CarsTableAdapter();
+            this.BTNpickup = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.GBcustomer.SuspendLayout();
             this.GBcar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.carsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rentalCarDataSet1)).BeginInit();
             this.GBcontract.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVcontract)).BeginInit();
             this.SuspendLayout();
             // 
             // GBcustomer
@@ -117,7 +119,7 @@
             // TBidSearch
             // 
             this.TBidSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TBidSearch.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.TBidSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TBidSearch.Location = new System.Drawing.Point(102, 20);
             this.TBidSearch.Name = "TBidSearch";
             this.TBidSearch.Size = new System.Drawing.Size(168, 22);
@@ -236,7 +238,7 @@
             // TBcolor
             // 
             this.TBcolor.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TBcolor.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.TBcolor.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TBcolor.Location = new System.Drawing.Point(383, 20);
             this.TBcolor.Name = "TBcolor";
             this.TBcolor.Size = new System.Drawing.Size(168, 22);
@@ -356,12 +358,12 @@
             // 
             // GBcontract
             // 
-            this.GBcontract.Controls.Add(this.dateTimePicker2);
+            this.GBcontract.Controls.Add(this.CBdiscount);
+            this.GBcontract.Controls.Add(this.DTP);
             this.GBcontract.Controls.Add(this.DTPrentDate);
-            this.GBcontract.Controls.Add(this.comboBox2);
+            this.GBcontract.Controls.Add(this.CBperiod);
             this.GBcontract.Controls.Add(this.label16);
             this.GBcontract.Controls.Add(this.label15);
-            this.GBcontract.Controls.Add(this.textBox10);
             this.GBcontract.Controls.Add(this.DTPdeliveryDate);
             this.GBcontract.Controls.Add(this.label13);
             this.GBcontract.Location = new System.Drawing.Point(904, 12);
@@ -371,13 +373,27 @@
             this.GBcontract.TabStop = false;
             this.GBcontract.Text = "Contract";
             // 
-            // dateTimePicker2
+            // CBdiscount
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(98, 107);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(168, 22);
-            this.dateTimePicker2.TabIndex = 32;
+            this.CBdiscount.FormattingEnabled = true;
+            this.CBdiscount.Items.AddRange(new object[] {
+            "0",
+            "5",
+            "10",
+            "25",
+            "50"});
+            this.CBdiscount.Location = new System.Drawing.Point(98, 50);
+            this.CBdiscount.Name = "CBdiscount";
+            this.CBdiscount.Size = new System.Drawing.Size(168, 24);
+            this.CBdiscount.TabIndex = 33;
+            // 
+            // DTP
+            // 
+            this.DTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DTP.Location = new System.Drawing.Point(98, 107);
+            this.DTP.Name = "DTP";
+            this.DTP.Size = new System.Drawing.Size(168, 22);
+            this.DTP.TabIndex = 32;
             // 
             // DTPrentDate
             // 
@@ -387,17 +403,17 @@
             this.DTPrentDate.Size = new System.Drawing.Size(168, 22);
             this.DTPrentDate.TabIndex = 18;
             // 
-            // comboBox2
+            // CBperiod
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.CBperiod.FormattingEnabled = true;
+            this.CBperiod.Items.AddRange(new object[] {
             "Daily",
             "Weekly",
             "Monthly"});
-            this.comboBox2.Location = new System.Drawing.Point(98, 21);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(168, 24);
-            this.comboBox2.TabIndex = 31;
+            this.CBperiod.Location = new System.Drawing.Point(98, 21);
+            this.CBperiod.Name = "CBperiod";
+            this.CBperiod.Size = new System.Drawing.Size(168, 24);
+            this.CBperiod.TabIndex = 31;
             // 
             // label16
             // 
@@ -415,17 +431,9 @@
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label15.Location = new System.Drawing.Point(6, 56);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(38, 16);
+            this.label15.Size = new System.Drawing.Size(59, 16);
             this.label15.TabIndex = 25;
-            this.label15.Text = "Price";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox10.Location = new System.Drawing.Point(98, 50);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(168, 22);
-            this.textBox10.TabIndex = 28;
+            this.label15.Text = "Discount";
             // 
             // DTPdeliveryDate
             // 
@@ -450,10 +458,10 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label14.Location = new System.Drawing.Point(1326, 32);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label14.Location = new System.Drawing.Point(1326, 41);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(89, 38);
+            this.label14.Size = new System.Drawing.Size(50, 22);
             this.label14.TabIndex = 19;
             this.label14.Text = "0000";
             // 
@@ -490,31 +498,57 @@
             // 
             this.BTNrent.Location = new System.Drawing.Point(1185, 91);
             this.BTNrent.Name = "BTNrent";
-            this.BTNrent.Size = new System.Drawing.Size(225, 53);
+            this.BTNrent.Size = new System.Drawing.Size(110, 53);
             this.BTNrent.TabIndex = 34;
             this.BTNrent.Text = "Rent";
             this.BTNrent.UseVisualStyleBackColor = true;
+            this.BTNrent.Click += new System.EventHandler(this.BTNrent_Click);
             // 
-            // dataGridView1
+            // DGVcontract
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 165);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1398, 430);
-            this.dataGridView1.TabIndex = 35;
+            this.DGVcontract.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVcontract.Location = new System.Drawing.Point(12, 191);
+            this.DGVcontract.Name = "DGVcontract";
+            this.DGVcontract.ReadOnly = true;
+            this.DGVcontract.RowHeadersWidth = 51;
+            this.DGVcontract.RowTemplate.Height = 24;
+            this.DGVcontract.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGVcontract.Size = new System.Drawing.Size(1398, 404);
+            this.DGVcontract.TabIndex = 35;
             // 
             // carsTableAdapter
             // 
             this.carsTableAdapter.ClearBeforeFill = true;
+            // 
+            // BTNpickup
+            // 
+            this.BTNpickup.Location = new System.Drawing.Point(1300, 90);
+            this.BTNpickup.Name = "BTNpickup";
+            this.BTNpickup.Size = new System.Drawing.Size(110, 53);
+            this.BTNpickup.TabIndex = 36;
+            this.BTNpickup.Text = "Pick Up";
+            this.BTNpickup.UseVisualStyleBackColor = true;
+            this.BTNpickup.Click += new System.EventHandler(this.BTNpickup_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(13, 165);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(148, 20);
+            this.checkBox1.TabIndex = 39;
+            this.checkBox1.Text = "only rented vehicles";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Contract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1422, 607);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.BTNpickup);
+            this.Controls.Add(this.DGVcontract);
             this.Controls.Add(this.BTNrent);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.BTNcalculate);
@@ -524,6 +558,7 @@
             this.Controls.Add(this.GBcar);
             this.Controls.Add(this.GBcustomer);
             this.Name = "Contract";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contract";
             this.Load += new System.EventHandler(this.Contract_Load);
             this.GBcustomer.ResumeLayout(false);
@@ -534,7 +569,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.rentalCarDataSet1)).EndInit();
             this.GBcontract.ResumeLayout(false);
             this.GBcontract.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVcontract)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -570,21 +605,23 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.GroupBox GBcontract;
         private System.Windows.Forms.DateTimePicker DTPrentDate;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox CBperiod;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label DTPdeliveryDate;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker DTP;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label LBLcost;
         private System.Windows.Forms.Button BTNcalculate;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button BTNrent;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGVcontract;
         private RentalCarDataSet1 rentalCarDataSet1;
         private System.Windows.Forms.BindingSource carsBindingSource;
         private RentalCarDataSet1TableAdapters.CarsTableAdapter carsTableAdapter;
+        private System.Windows.Forms.ComboBox CBdiscount;
+        private System.Windows.Forms.Button BTNpickup;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
